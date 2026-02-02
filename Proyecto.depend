@@ -2,3 +2,22 @@
 1770020862 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\main.cpp
 	<iostream>
 
+1770053730 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaprincipal.cpp
+	"VistaPrincipal.h"
+
+1770052327 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaprincipal.h
+	<iostream>
+	<string>
+
+1770053730 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistacliente.cpp
+	"VistaCliente.h"
+
+1770053730 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistacliente.h
+	<VistaPrincipal.h>
+
+1770053955 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaadministrador.cpp
+	"VistaAdministrador.h"
+
+1770053730 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaadministrador.h
+	<VistaPrincipal.h>
+

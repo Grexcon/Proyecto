@@ -16,5 +16,6 @@ void VistaPrincipal::menuPrincipal(int& opcion)
     cout << "=========================";
     cout << " Sistema Comercial UNA";
     cout << "=========================";
+    cout << "Seleccione una opción:";
     cin >> opcion;
 }

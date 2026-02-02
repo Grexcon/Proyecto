@@ -25,11 +25,13 @@
 				</Compiler>
 			</Target>
 		</Build>
-		<Unit filename="include/Controlador.h" />
-		<Unit filename="include/Vista.h" />
+		<Unit filename="include/VistaAdministrador.h" />
+		<Unit filename="include/VistaCliente.h" />
+		<Unit filename="include/VistaPrincipal.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Controlador.cpp" />
-		<Unit filename="src/Vista.cpp" />
+		<Unit filename="src/VistaAdministrador.cpp" />
+		<Unit filename="src/VistaCliente.cpp" />
+		<Unit filename="src/VistaPrincipal.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
