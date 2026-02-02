@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Prueba de foto!" << endl;
+    cout << "Prueba usando la laptop!" << endl;
     return 0;
 }
