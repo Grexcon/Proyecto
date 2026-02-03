@@ -1,0 +1,8 @@
+2;1;Compra de materiales;150000
+2;2;Compra adicional;85000
+3;3;Servicio técnico;120000
+4;4;Venta de equipo;300000
+4;5;Accesorios;45000
+5;6;Compra general;95000
+6;7;Venta inicial;200000
+6;8;Venta complementaria;50000
