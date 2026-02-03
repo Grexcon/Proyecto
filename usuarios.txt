@@ -1,0 +1,6 @@
+1;admin;123;administrador
+2;jlopez;abc;cliente
+3;mmora;abc;cliente
+4;acastro;abc;cliente
+5;rsoto;abc;cliente
+6;pgarcia;abc;cliente
