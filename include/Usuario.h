@@ -6,12 +6,12 @@ class Usuario
 {
     public:
         Usuario();
-        Usuario(int id_usuario, string usuario, string contraseña, string rol);
+        Usuario(int id_usuario, string usuario, string contraseï¿½a, string rol);
         virtual ~Usuario();
 
         int getIdUsuario();
         string getUsuario();
-        int getContraseña();
+        int getContraseï¿½a();
         int getRol();
 
 

@@ -10,11 +10,11 @@ Usuario::~Usuario()
     //dtor
 }
 
-Usuario::Usuario(int id_usuario, string usuario, string contraseña, string rol)
+Usuario::Usuario(int id_usuario, string usuario, string contraseï¿½a, string rol)
 {
    getIdUsuario(id_usuario);
    getIdUsuario(usuario);
-   getContraseña(contraseña);
+   getContraseï¿½a(contraseï¿½a);
    getRol(rol);
 }
     int Usuario::getIdUsuario()
@@ -27,7 +27,7 @@ Usuario::Usuario(int id_usuario, string usuario, string contraseña, string rol)
 
     }
 
-    int Usuario::getContraseña()
+    int Usuario::getContraseï¿½a()
     {
 
     }
