@@ -53,8 +53,9 @@
 
 1770201004 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\cliente.h
 
-1770190820 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\main.cpp
+1770207604 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\main.cpp
 	<iostream>
+	<ControladorPrincipal.h>
 
 1770055914 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaadministrador.cpp
 	"VistaAdministrador.h"
@@ -62,29 +63,39 @@
 1770196275 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaadministrador.h
 	<VistaPrincipal.h>
 
-1770201935 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+1770209871 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+	<Usuario.h>
 	<iostream>
 	<string>
 
-1770201935 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
+1770206853 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
 	"VistaCliente.h"
 
 1770055914 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistacliente.h
 	<VistaPrincipal.h>
 
-1770201935 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
+1770213399 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
 	"VistaPrincipal.h"
 
-1770203173 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\usuario.cpp
+1770212660 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\usuario.cpp
 	"Usuario.h"
 
-1770205928 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\usuario.h
+1770212614 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\usuario.h
 	<string>
 	<iostream>
 
-1770205130 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\cliente.cpp
+1770207003 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\cliente.cpp
 	"Cliente.h"
 
-1770204739 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\cliente.h
+1770206853 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\cliente.h
 	<Usuario.h>
+
+1770213523 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\controladorprincipal.cpp
+	"ControladorPrincipal.h"
+
+1770208739 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\controladorprincipal.h
+	<VistaPrincipal.h>
+	<Usuario.h>
+	<fstream>
+	<sstream>
 

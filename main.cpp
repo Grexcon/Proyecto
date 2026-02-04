@@ -1,9 +1,16 @@
 #include <iostream>
+#include <ControladorPrincipal.h>
 
 using namespace std;
 
 int main()
 {
-    cout << "Prueba usando la laptop!" << endl;
+
+    ControladorPrincipal app;
+
+    app.ejecutar();
+
+
+
     return 0;
 }
