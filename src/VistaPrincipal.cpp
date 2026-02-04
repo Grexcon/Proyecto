@@ -19,3 +19,10 @@ void VistaPrincipal::menuPrincipal(int& opcion)
     cout << "Seleccione una opción:";
     cin >> opcion;
 }
+
+
+void VistaPrincipal::imprimir(string texto)
+{
+    cout << texto << endl << endl;
+}
+

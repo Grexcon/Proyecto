@@ -23,3 +23,5 @@ void VistaCliente::menuPrincipal(int& opcion)
     cin >> opcion;
 }
 
+
+
