@@ -14,6 +14,7 @@ class VistaPrincipal
         virtual ~VistaPrincipal();
 
         virtual void menuPrincipal(int& opcion);
+        void imprimir (string texto);
 
     protected:
 

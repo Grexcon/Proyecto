@@ -21,3 +21,35 @@
 1770053730 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaadministrador.h
 	<VistaPrincipal.h>
 
+1770055914 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaadministrador.cpp
+	"VistaAdministrador.h"
+
+1770196275 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaadministrador.h
+	<VistaPrincipal.h>
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+	<iostream>
+	<string>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
+	"VistaPrincipal.h"
+
+1770190820 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\main.cpp
+	<iostream>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
+	"VistaCliente.h"
+
+1770055914 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistacliente.h
+	<VistaPrincipal.h>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\adminitrador.cpp
+	"Adminitrador.h"
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\adminitrador.h
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\cliente.cpp
+	"Cliente.h"
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\cliente.h
+
