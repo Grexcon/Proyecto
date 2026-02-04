@@ -12,6 +12,7 @@ class Usuario
     public:
         Usuario(int id_usuario, string usuario, string contrasena, string rol);
         Usuario(int id_usuario );
+        Usuario(string usuario, string contrasena);
         Usuario();
         virtual ~Usuario();
 

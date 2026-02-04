@@ -1,6 +1,7 @@
 #ifndef VISTAPRINCIPAL_H
 #define VISTAPRINCIPAL_H
 
+#include <Usuario.h>
 #include <iostream>
 #include <string>
 
@@ -15,6 +16,8 @@ class VistaPrincipal
 
         virtual void menuPrincipal(int& opcion);
         void imprimir (string texto);
+        Usuario inicioSeccionUsuario();
+
 
     protected:
 

@@ -22,6 +22,13 @@ Usuario::Usuario(int id_usuario)
     this ->id_usuario = id_usuario;
 }
 
+Usuario::Usuario(string usuario, string contrasena)
+{
+    this -> usuario = usuario;
+    this -> contrasena = contrasena;
+}
+
+
 string Usuario::getUsuario()
 {
     return usuario;
