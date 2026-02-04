@@ -10,32 +10,34 @@ Usuario::~Usuario()
     //dtor
 }
 
-Usuario::Usuario(int id_usuario, string usuario, string contrase�a, string rol)
+Usuario::Usuario(int id_usuario, string usuario, string contrasena, string rol)
 {
-   getIdUsuario(id_usuario);
-   getIdUsuario(usuario);
-   getContrase�a(contrase�a);
-   getRol(rol);
-}
-    int Usuario::getIdUsuario()
-    {
+    this -> id_usuario = id_usuario;
+    this -> usuario = usuario;
+    this -> contrasena = contrasena;
+    this -> rol = rol;
+}
+Usuario::Usuario(int id_usuario)
+{
+    this ->id_usuario = id_usuario;
+}
 
-    }
+string Usuario::getUsuario()
+{
+    return usuario;
+}
 
-    string Usuario::getUsuario()
-    {
+int Usuario::getIdUsuario()
+{
+    return id_usuario;
+}
 
-    }
+string Usuario::getContrasena()
+{
+    return contrasena;
+}
 
-    int Usuario::getContrase�a()
-    {
-
-    }
-        int Usuario::getRol()
-        {
-
-        }
-
-
-
-
+string Usuario::getRol()
+{
+    return rol;
+}

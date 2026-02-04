@@ -53,3 +53,38 @@
 
 1770201004 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\cliente.h
 
+1770190820 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\main.cpp
+	<iostream>
+
+1770055914 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaadministrador.cpp
+	"VistaAdministrador.h"
+
+1770196275 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaadministrador.h
+	<VistaPrincipal.h>
+
+1770201935 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+	<iostream>
+	<string>
+
+1770201935 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
+	"VistaCliente.h"
+
+1770055914 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistacliente.h
+	<VistaPrincipal.h>
+
+1770201935 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
+	"VistaPrincipal.h"
+
+1770203173 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\usuario.cpp
+	"Usuario.h"
+
+1770205928 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\usuario.h
+	<string>
+	<iostream>
+
+1770205130 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\cliente.cpp
+	"Cliente.h"
+
+1770204739 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\cliente.h
+	<Usuario.h>
+
