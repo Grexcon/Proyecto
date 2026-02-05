@@ -29,14 +29,21 @@ void ControladorPrincipal::ejecutar()
         case 1:
         {
 
-            Usuario e = vistaPrin.inicioSeccionUsuario();
+             Usuario e = vistaPrin.inicioSeccionUsuario();
             for(int i=0; i < cantidad; i++)
             {
 
-                if(lista[i].getIdUsuario() == e.getIdUsuario() && lista[i].getContrasena() == e.getContrasena())
+                if(lista[i].getUsuario() == e.getUsuario() && lista[i].getContrasena() == e.getContrasena())
                 {
+                    if(lista[i].getRol() == "administrador" ){
+
+                    }else{
+
+                    }
                     cout << "administtrador encotrado";
                 }
+
+
             }
         }
         break;
@@ -55,26 +62,13 @@ void ControladorPrincipal::ejecutar()
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
     while(opcion != 0);
 
 
 }
 
-void ControladorPrincipal::cargarRegistrosArchivos()
+void ControladorPrincipal::cargarRegistrosUsuarios()
 {
     ifstream fs(archivo);
 
@@ -112,4 +106,18 @@ void ControladorPrincipal::cargarRegistrosArchivos()
     }
     fs.close();
 }
+
+Usuario ControladorPrincipal::usuarioActual()
+{
+    Usuario rnUser;
+    Usuario e = vistaPrin();
+
+    for(int i=0; i < cantidad; i++){
+
+        if(lista.getUsuario() == e.getUsuario() && )
+
+
+    }
+}
+
 

@@ -14,7 +14,6 @@ class Cliente : public Usuario
     protected:
 
     private:
-        int id_usuario;
         int id_cliente;
         string nombre;
         string telefono;

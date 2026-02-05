@@ -22,12 +22,13 @@ class Usuario
         string getRol();
 
     protected:
-
-    private:
         int id_usuario;
         string usuario;
         string contrasena;
         string rol;
+
+    private:
+
 };
 
 #endif // USUARIO_H
