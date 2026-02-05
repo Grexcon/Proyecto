@@ -16,16 +16,18 @@ class ControladorPrincipal
 
         void ejecutar();
 
+        Usuario usuarioActual();
+
 
         //Metodos para los archivos
 
-        void cargarRegistrosArchivos();
+        void cargarRegistrosUsuarios();
 
     protected:
 
     private:
         VistaPrincipal vistaPrin;
-        Usuario lista[1000];
+        Usuario listaUsuarios[1000];
         string archivo;
         int cantidad, idConsecutivo;
 };
