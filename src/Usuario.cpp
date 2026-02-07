@@ -48,3 +48,9 @@ string Usuario::getRol()
 {
     return rol;
 }
+
+string Usuario::toString()
+{
+    return "ID: " + to_string(id_usuario) + " Usuario: " + usuario + " Contraseña: " + contrasena + " Rol: " + rol;
+}
+

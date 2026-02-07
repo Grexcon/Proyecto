@@ -2,9 +2,12 @@
 
 ControladorPrincipal::ControladorPrincipal()
 {
-    archivo = "usuarios.txt";
+    archivoUsuarios = "usuarios.txt";
+    archivoCliente = "clientes.txt";
     cantidad = 0;
     idConsecutivo = 1;
+    idConsecutivoClientes = 1;
+
 }
 
 ControladorPrincipal::~ControladorPrincipal()
@@ -15,7 +18,8 @@ ControladorPrincipal::~ControladorPrincipal()
 
 void ControladorPrincipal::ejecutar()
 {
-    cargarRegistrosArchivos();
+    cargarRegistrosUsuarios();
+    cargarRegistrosClientes();
     int opcion;
 
     do
@@ -23,24 +27,29 @@ void ControladorPrincipal::ejecutar()
 
         vistaPrin.menuPrincipal(opcion);
 
+
         switch(opcion)
         {
 
         case 1:
         {
+            Usuario rnUser = usuarioActual();
 
-             Usuario e = vistaPrin.inicioSeccionUsuario();
+            //Usuario e = vistaPrin.inicioSeccionUsuario();
             for(int i=0; i < cantidad; i++)
             {
 
-                if(lista[i].getUsuario() == e.getUsuario() && lista[i].getContrasena() == e.getContrasena())
+                if(listaUsuarios[i].getUsuario() == rnUser.getUsuario() && listaUsuarios[i].getContrasena() == rnUser.getContrasena())
                 {
-                    if(lista[i].getRol() == "administrador" ){
-
-                    }else{
+                    if(rnUser.getRol() == "administrador" )
+                    {
 
                     }
-                    cout << "administtrador encotrado";
+                    else
+                    {
+
+                    }
+                    //cout << "administtrador encotrado";
                 }
 
 
@@ -70,7 +79,7 @@ void ControladorPrincipal::ejecutar()
 
 void ControladorPrincipal::cargarRegistrosUsuarios()
 {
-    ifstream fs(archivo);
+    ifstream fs(archivoUsuarios);
 
 
     if(fs)
@@ -97,7 +106,7 @@ void ControladorPrincipal::cargarRegistrosUsuarios()
             string rol = campo;
 
             Usuario a(id_usuario,usuario, contrasena,rol);
-            lista[cantidad++] = a;
+            listaUsuarios[cantidad++] = a;
 
             idConsecutivo = id_usuario+1;
 
@@ -107,17 +116,69 @@ void ControladorPrincipal::cargarRegistrosUsuarios()
     fs.close();
 }
 
+void ControladorPrincipal::cargarRegistrosClientes()
+{
+    ifstream fs(archivoCliente);
+
+
+    if(fs)
+    {
+
+        string linea, campo;
+
+        while(getline(fs,linea))
+        {
+
+
+            stringstream ss(linea);
+
+            getline(ss, campo, ';');
+            int id_usuario = stoi(campo);
+
+            getline(ss, campo, ';');
+            int id_cliente = stoi(campo);
+
+            getline(ss, campo, ';');
+            string nombre = campo;
+
+            getline(ss, campo, ';');
+            string telefono = campo;
+
+            getline(ss, campo, ';');
+            string direccion = campo;
+
+            Cliente a(id_usuario,id_cliente, nombre, telefono, direccion);
+            listaClientes[cantidad++] = a;
+
+            idConsecutivo = id_usuario+1;
+            idConsecutivoClientes = id_cliente+1;
+        }
+
+    }
+    fs.close();
+}
+
+
 Usuario ControladorPrincipal::usuarioActual()
 {
-    Usuario rnUser;
-    Usuario e = vistaPrin();
+    Usuario rnUser = vistaPrin.inicioSeccionUsuario();
+    //Usuario e = vistaPrin.inicioSeccionUsuario();
 
-    for(int i=0; i < cantidad; i++){
+    for(int i=0; i < cantidad; i++)
+    {
 
-        if(lista.getUsuario() == e.getUsuario() && )
+        if(listaUsuarios[i].getUsuario() == rnUser.getUsuario())
+        {
+
+            rnUser = listaUsuarios[i] ;
+
+            cout << rnUser.toString();
+
+        }
 
 
     }
+    return rnUser;
 }
 
 

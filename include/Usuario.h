@@ -20,6 +20,7 @@ class Usuario
         string getUsuario();
         string getContrasena();
         string getRol();
+        string toString();
 
     protected:
         int id_usuario;
