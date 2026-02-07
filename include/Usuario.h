@@ -1,0 +1,35 @@
+#ifndef USUARIO_H
+#define USUARIO_H
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Usuario
+{
+    public:
+        Usuario(int id_usuario, string usuario, string contrasena, string rol);
+        Usuario(int id_usuario );
+        Usuario(string usuario, string contrasena);
+        Usuario();
+        virtual ~Usuario();
+
+        int getIdUsuario();
+        string getUsuario();
+        string getContrasena();
+        string getRol();
+        string toString();
+
+    protected:
+        int id_usuario;
+        string usuario;
+        string contrasena;
+        string rol;
+
+    private:
+
+};
+
+#endif // USUARIO_H

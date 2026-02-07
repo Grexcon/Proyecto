@@ -1,23 +1,125 @@
 # depslib dependency file v1.0
-1770020862 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\main.cpp
+1770213947 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\main.cpp
 	<iostream>
+	<ControladorPrincipal.h>
 
-1770053730 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaprincipal.cpp
+1770213947 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaprincipal.cpp
 	"VistaPrincipal.h"
 
-1770052327 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaprincipal.h
+1770213947 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaprincipal.h
+	<Usuario.h>
 	<iostream>
 	<string>
 
-1770053730 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistacliente.cpp
+1770213947 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistacliente.cpp
 	"VistaCliente.h"
 
-1770053730 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistacliente.h
+1770054304 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistacliente.h
 	<VistaPrincipal.h>
 
-1770053955 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaadministrador.cpp
+1770054304 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\vistaadministrador.cpp
 	"VistaAdministrador.h"
 
-1770053730 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaadministrador.h
+1770054304 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\vistaadministrador.h
 	<VistaPrincipal.h>
+
+1770055914 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\src\vistaadministrador.cpp
+	"VistaAdministrador.h"
+
+1770196275 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\vistaadministrador.h
+	<VistaPrincipal.h>
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+	<iostream>
+	<string>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
+	"VistaPrincipal.h"
+
+1770190820 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\main.cpp
+	<iostream>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
+	"VistaCliente.h"
+
+1770055914 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\vistacliente.h
+	<VistaPrincipal.h>
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\src\adminitrador.cpp
+	"Adminitrador.h"
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\adminitrador.h
+
+1770201004 source:c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\src\cliente.cpp
+	"Cliente.h"
+
+1770201004 c:\users\kille\documents\universidad\verano\proyectofinal ï¿½ davidgutierrezguzman ï¿½ nombrecompletoestudiante2\proyecto\include\cliente.h
+
+1770207604 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\main.cpp
+	<iostream>
+	<ControladorPrincipal.h>
+
+1770055914 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaadministrador.cpp
+	"VistaAdministrador.h"
+
+1770196275 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaadministrador.h
+	<VistaPrincipal.h>
+
+1770209871 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistaprincipal.h
+	<Usuario.h>
+	<iostream>
+	<string>
+
+1770206853 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistacliente.cpp
+	"VistaCliente.h"
+
+1770055914 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\vistacliente.h
+	<VistaPrincipal.h>
+
+1770213399 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\vistaprincipal.cpp
+	"VistaPrincipal.h"
+
+1770212660 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\usuario.cpp
+	"Usuario.h"
+
+1770212614 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\usuario.h
+	<string>
+	<iostream>
+
+1770207003 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\cliente.cpp
+	"Cliente.h"
+
+1770206853 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\cliente.h
+	<Usuario.h>
+
+1770213523 source:c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\src\controladorprincipal.cpp
+	"ControladorPrincipal.h"
+
+1770208739 c:\users\kille\documents\universidad\verano\proyectofinal – davidgutierrezguzman – nombrecompletoestudiante2\proyecto\include\controladorprincipal.h
+	<VistaPrincipal.h>
+	<Usuario.h>
+	<fstream>
+	<sstream>
+
+1770217747 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\controladorprincipal.h
+	<VistaPrincipal.h>
+	<Usuario.h>
+	<fstream>
+	<sstream>
+
+1770213947 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\usuario.h
+	<string>
+	<iostream>
+
+1770216026 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\controladorprincipal.cpp
+	"ControladorPrincipal.h"
+
+1770213947 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\cliente.cpp
+	"Cliente.h"
+
+1770213947 c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\include\cliente.h
+	<Usuario.h>
+
+1770213947 source:c:\users\kille\onedrive\documentos\verano\proyecto\proyecto\src\usuario.cpp
+	"Usuario.h"
 
