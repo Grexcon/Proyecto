@@ -30,7 +30,7 @@ void VistaAdministrador::menuPrincipal(int& opcion)
 void VistaAdministrador::menuReportes(int& opcion)
 {
     cout << "==========================";
-    cout << "Reoirtes Adminitrador";
+    cout << "Reportes Adminitrador";
     cout << "==========================";
     cout << "1. Listado general de clientes";
     cout << "2. Ventas y abonos de un cliente";
