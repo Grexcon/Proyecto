@@ -27,6 +27,7 @@
 		</Build>
 		<Unit filename="include/Abonos.h" />
 		<Unit filename="include/Cliente.h" />
+		<Unit filename="include/ControladorCliente.h" />
 		<Unit filename="include/ControladorPrincipal.h" />
 		<Unit filename="include/Usuario.h" />
 		<Unit filename="include/Ventas.h" />
@@ -36,6 +37,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Abonos.cpp" />
 		<Unit filename="src/Cliente.cpp" />
+		<Unit filename="src/ControladorCliente.cpp" />
 		<Unit filename="src/ControladorPrincipal.cpp" />
 		<Unit filename="src/Usuario.cpp" />
 		<Unit filename="src/Ventas.cpp" />

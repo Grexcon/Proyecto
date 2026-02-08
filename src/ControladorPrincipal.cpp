@@ -6,11 +6,15 @@ ControladorPrincipal::ControladorPrincipal()
     archivoCliente = "clientes.txt";
     archivoVentas = "ventas.txt";
     archivoAbonos = "abonos.txt";
-    cantidad = 0;
+    cantidadUsuarios = 0;
+    cantidadClientes = 0;
+    cantidadVentas = 0;
+    cantidadAbonos = 0;
     idConsecutivo = 1;
     idConsecutivoClientes = 1;
     idConsecutivoVentas = 1;
     idConsecutivoAbonos = 1;
+    indiceClienteActual = -1;
 
 
 }
@@ -39,27 +43,18 @@ void ControladorPrincipal::ejecutar()
 
         case 1:
         {
-            Usuario rnUser = usuarioActual();
+            Usuario& rnUser = usuarioActual();
 
-            //Usuario e = vistaPrin.inicioSeccionUsuario();
-            for(int i=0; i < cantidad; i++)
+            if(rnUser.getRol() == "administrador" )
             {
 
-                if(listaUsuarios[i].getUsuario() == rnUser.getUsuario() && listaUsuarios[i].getContrasena() == rnUser.getContrasena())
-                {
-                    if(rnUser.getRol() == "administrador" )
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                    //cout << "administtrador encotrado";
-                }
-
-
             }
+            else
+            {
+                buscarClienteActual();
+                conCliente.ejecutar(*this);
+            }
+
         }
         break;
 
@@ -112,7 +107,7 @@ void ControladorPrincipal::cargarRegistrosUsuarios()
             string rol = campo;
 
             Usuario a(id_usuario,usuario, contrasena,rol);
-            listaUsuarios[cantidad++] = a;
+            listaUsuarios[cantidadUsuarios++] = a;
 
             idConsecutivo = id_usuario+1;
 
@@ -154,7 +149,7 @@ void ControladorPrincipal::cargarRegistrosClientes()
             string direccion = campo;
 
             Cliente a(id_usuario,id_cliente, nombre, telefono, direccion);
-            listaClientes[cantidad++] = a;
+            listaClientes[cantidadClientes++] = a;
 
             idConsecutivo = id_usuario+1;
             idConsecutivoClientes = id_cliente+1;
@@ -166,7 +161,7 @@ void ControladorPrincipal::cargarRegistrosClientes()
 
 void ControladorPrincipal::cargarRegistrosVentas()
 {
-     ifstream fs(archivoVentas);
+    ifstream fs(archivoVentas);
 
 
     if(fs)
@@ -193,7 +188,7 @@ void ControladorPrincipal::cargarRegistrosVentas()
             string monto = campo;
 
             Ventas a(id_usuario,id_ventas, descripcion, monto);
-            listaVentas[cantidad++] = a;
+            listaVentas[cantidadVentas++] = a;
 
             idConsecutivo = id_usuario+1;
             idConsecutivoVentas = id_ventas+1;
@@ -205,7 +200,7 @@ void ControladorPrincipal::cargarRegistrosVentas()
 
 void ControladorPrincipal::cargarRegistrosAbonos()
 {
-     ifstream fs(archivoAbonos);
+    ifstream fs(archivoAbonos);
 
 
     if(fs)
@@ -229,7 +224,7 @@ void ControladorPrincipal::cargarRegistrosAbonos()
             string monto = campo;
 
             Abonos a(id_usuario,id_abono, monto);
-            listaAbonos[cantidad++] = a;
+            listaAbonos[cantidadAbonos++] = a;
 
             idConsecutivo = id_usuario+1;
             idConsecutivoAbonos = id_abono+1;
@@ -241,26 +236,54 @@ void ControladorPrincipal::cargarRegistrosAbonos()
 
 
 
-Usuario ControladorPrincipal::usuarioActual()
+Usuario& ControladorPrincipal::usuarioActual()
 {
-    Usuario rnUser = vistaPrin.inicioSeccionUsuario();
+    Usuario temporal = vistaPrin.inicioSeccionUsuario();
     //Usuario e = vistaPrin.inicioSeccionUsuario();
 
-    for(int i=0; i < cantidad; i++)
+    for(int i=0; i < cantidadUsuarios; i++)
     {
 
-        if(listaUsuarios[i].getUsuario() == rnUser.getUsuario())
+        if(listaUsuarios[i].getUsuario() == temporal.getUsuario()&& listaUsuarios[i].getContrasena() == temporal.getContrasena())
         {
 
-            rnUser = listaUsuarios[i] ;
+            usuarioLogeado = listaUsuarios[i] ;
 
-            cout << rnUser.toString();
+            cout << usuarioLogeado.toString() << endl;
 
         }
 
 
     }
-    return rnUser;
+    return usuarioLogeado;
 }
+
+Usuario& ControladorPrincipal::getUsuarioLogeado()
+{
+    return usuarioLogeado;
+}
+
+void ControladorPrincipal::buscarClienteActual()
+{
+     indiceClienteActual = -1;
+
+    for(int i = 0; i < cantidadClientes; i++)
+    {
+        if(listaClientes[i].getIdUsuario() == usuarioLogeado.getIdUsuario())
+        {
+            indiceClienteActual = i;
+            break;
+        }
+    }
+}
+
+Cliente& ControladorPrincipal::getClienteActual()
+{
+    return listaClientes[indiceClienteActual];
+}
+
+
+
+
 
 
