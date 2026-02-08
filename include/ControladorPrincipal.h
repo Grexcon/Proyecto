@@ -3,6 +3,8 @@
 #include <VistaPrincipal.h>
 #include <Usuario.h>
 #include <Cliente.h>
+#include <Ventas.h>
+#include <Abonos.h>
 
 #include <fstream>
 #include <sstream>
@@ -24,6 +26,8 @@ class ControladorPrincipal
 
         void cargarRegistrosUsuarios();
         void cargarRegistrosClientes();
+        void cargarRegistrosVentas();
+        void cargarRegistrosAbonos();
 
     protected:
 
@@ -31,9 +35,14 @@ class ControladorPrincipal
         VistaPrincipal vistaPrin;
         Usuario listaUsuarios[1000];
         Cliente listaClientes[1000];
+        Ventas  listaVentas[1000];
+        Abonos  listaAbonos[1000];
+
         string archivoUsuarios;
         string archivoCliente;
-        int cantidad, idConsecutivo, idConsecutivoClientes;
+        string archivoVentas;
+        string archivoAbonos;
+        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos;
 };
 
 #endif // CONTROLADORPRINCIPAL_H

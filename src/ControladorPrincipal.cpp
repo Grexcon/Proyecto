@@ -4,9 +4,14 @@ ControladorPrincipal::ControladorPrincipal()
 {
     archivoUsuarios = "usuarios.txt";
     archivoCliente = "clientes.txt";
+    archivoVentas = "ventas.txt";
+    archivoAbonos = "abonos.txt";
     cantidad = 0;
     idConsecutivo = 1;
     idConsecutivoClientes = 1;
+    idConsecutivoVentas = 1;
+    idConsecutivoAbonos = 1;
+
 
 }
 
@@ -15,6 +20,7 @@ ControladorPrincipal::~ControladorPrincipal()
     //dtor
 }
 
+class ControladorPrincipal;
 
 void ControladorPrincipal::ejecutar()
 {
@@ -157,6 +163,82 @@ void ControladorPrincipal::cargarRegistrosClientes()
     }
     fs.close();
 }
+
+void ControladorPrincipal::cargarRegistrosVentas()
+{
+     ifstream fs(archivoVentas);
+
+
+    if(fs)
+    {
+
+        string linea, campo;
+
+        while(getline(fs,linea))
+        {
+
+
+            stringstream ss(linea);
+
+            getline(ss, campo, ';');
+            int id_usuario = stoi(campo);
+
+            getline(ss, campo, ';');
+            int id_ventas = stoi(campo);
+
+            getline(ss, campo, ';');
+            string descripcion = campo;
+
+            getline(ss, campo, ';');
+            string monto = campo;
+
+            Ventas a(id_usuario,id_ventas, descripcion, monto);
+            listaVentas[cantidad++] = a;
+
+            idConsecutivo = id_usuario+1;
+            idConsecutivoVentas = id_ventas+1;
+        }
+
+    }
+    fs.close();
+}
+
+void ControladorPrincipal::cargarRegistrosAbonos()
+{
+     ifstream fs(archivoAbonos);
+
+
+    if(fs)
+    {
+
+        string linea, campo;
+
+        while(getline(fs,linea))
+        {
+
+
+            stringstream ss(linea);
+
+            getline(ss, campo, ';');
+            int id_usuario = stoi(campo);
+
+            getline(ss, campo, ';');
+            int id_abono = stoi(campo);
+
+            getline(ss, campo, ';');
+            string monto = campo;
+
+            Abonos a(id_usuario,id_abono, monto);
+            listaAbonos[cantidad++] = a;
+
+            idConsecutivo = id_usuario+1;
+            idConsecutivoAbonos = id_abono+1;
+        }
+
+    }
+    fs.close();
+}
+
 
 
 Usuario ControladorPrincipal::usuarioActual()
