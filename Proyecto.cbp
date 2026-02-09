@@ -26,7 +26,9 @@
 			</Target>
 		</Build>
 		<Unit filename="include/Abonos.h" />
+		<Unit filename="include/Administrador.h" />
 		<Unit filename="include/Cliente.h" />
+		<Unit filename="include/ControladorAdministrador.h" />
 		<Unit filename="include/ControladorCliente.h" />
 		<Unit filename="include/ControladorPrincipal.h" />
 		<Unit filename="include/Usuario.h" />
@@ -36,7 +38,9 @@
 		<Unit filename="include/VistaPrincipal.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Abonos.cpp" />
+		<Unit filename="src/Administrador.cpp" />
 		<Unit filename="src/Cliente.cpp" />
+		<Unit filename="src/ControladorAdministrador.cpp" />
 		<Unit filename="src/ControladorCliente.cpp" />
 		<Unit filename="src/ControladorPrincipal.cpp" />
 		<Unit filename="src/Usuario.cpp" />
