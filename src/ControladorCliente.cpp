@@ -37,6 +37,11 @@ void ControladorCliente::ejecutar(ControladorPrincipal& cp)
             break;
 
         case 3:
+            reporteSaldo(cp.getClienteActual(),
+                 cp.getListaVentas(),
+                 cp.getCantidadVentas(),
+                 cp.getListaAbonos(),
+                 cp.getCantidadAbonos());
             break;
         case 4:
             cp.ejecutar();
@@ -65,25 +70,54 @@ void ControladorCliente::actualizar(Cliente& a)
 
 void ControladorCliente::listarVentasyAbonos(Cliente& cliente, Ventas(&ventas)[1000], int cantVentas, Abonos(&abonos)[1000], int cantAbonos)
 {
-    cout << "===== Ventas del cliente =====\n";
+    Ventas ventasCliente[1000];
+    Abonos abonosCliente[1000];
+    int cantVC = 0;
+    int cantAC = 0;
+
     for (int i = 0; i < cantVentas; i++)
     {
         if (ventas[i].getIdUsuario() == cliente.getIdUsuario())
         {
-            cout << "ID Venta: " << ventas[i].getIdVenta()
-                 << " | Descripcion: " << ventas[i].getDescripcion()
-                 << " | Monto: " << ventas[i].getMonto() << endl;
+            ventasCliente[cantVC++] = ventas[i];
         }
     }
 
-    cout << "===== Abonos del cliente =====\n";
     for (int i = 0; i < cantAbonos; i++)
     {
         if (abonos[i].getIdUsuario() == cliente.getIdUsuario())
         {
-            cout << "ID Abono: " << abonos[i].getIdAbono()
-                 << " | Monto: " << abonos[i].getMonto() << endl;
+            abonosCliente[cantAC++] = abonos[i];
         }
     }
+
+    viCliente.mostrarVentasYAbonos(ventasCliente, cantVC,abonosCliente, cantAC);
 }
+
+void ControladorCliente::reporteSaldo(Cliente& cliente, Ventas(& ventas)[1000], int cantVentas, Abonos(& abonos)[1000], int cantAbonos)
+{
+    float totalVentas = 0;
+    float totalAbonos = 0;
+
+    for (int i = 0; i < cantVentas; i++)
+    {
+        if (ventas[i].getIdUsuario() == cliente.getIdUsuario())
+        {
+            totalVentas += ventas[i].getMonto();
+        }
+    }
+
+    for (int i = 0; i < cantAbonos; i++)
+    {
+        if (abonos[i].getIdUsuario() == cliente.getIdUsuario())
+        {
+            totalAbonos += abonos[i].getMonto();
+        }
+    }
+
+    float saldo = totalVentas - totalAbonos;
+
+    viCliente.mostrarReporteSaldo(totalVentas, totalAbonos, saldo);
+}
+
 

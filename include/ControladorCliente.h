@@ -10,22 +10,23 @@ class ControladorPrincipal;
 
 class ControladorCliente
 {
-    public:
-        ControladorCliente();
-        virtual ~ControladorCliente();
+public:
+    ControladorCliente();
+    virtual ~ControladorCliente();
 
-        void ejecutar(ControladorPrincipal& cp);
+    void ejecutar(ControladorPrincipal& cp);
 
-        // CRUD
+    // CRUD
 
-        void actualizar(Cliente& a);
-        void listarVentasyAbonos(Cliente& cliente, Ventas(&ventas)[1000], int cantVentas, Abonos(&abonos)[1000], int cantAbonos);
+    void actualizar(Cliente& a);
+    void listarVentasyAbonos(Cliente& cliente, Ventas(&ventas)[1000], int cantVentas, Abonos(&abonos)[1000], int cantAbonos);
+    void reporteSaldo(Cliente& cliente,Ventas(&ventas)[1000], int cantVentas,Abonos(&abonos)[1000], int cantAbonos);
 
-    protected:
+protected:
 
-    private:
-        VistaCliente viCliente;
-        VistaPrincipal vista;
+private:
+    VistaCliente viCliente;
+    VistaPrincipal vista;
 };
 
 #endif // CONTROLADORCLIENTE_H
