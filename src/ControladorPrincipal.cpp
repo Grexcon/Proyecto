@@ -263,4 +263,8 @@ Usuario ControladorPrincipal::usuarioActual()
     return rnUser;
 }
 
+void ControladorPrincipal::menuAdministrador(Usuario adminUser)
+{
+
+}
 

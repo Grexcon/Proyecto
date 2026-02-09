@@ -5,6 +5,8 @@
 #include <Cliente.h>
 #include <Ventas.h>
 #include <Abonos.h>
+#include <Administrador.h>
+#include <ControladorAdministrador.h>
 
 #include <fstream>
 #include <sstream>
@@ -20,6 +22,7 @@ class ControladorPrincipal
         void ejecutar();
 
         Usuario usuarioActual();
+        void menuAdministrador(Usuario adminUser);
 
 
         //Metodos para los archivos
@@ -38,10 +41,7 @@ class ControladorPrincipal
         Ventas  listaVentas[1000];
         Abonos  listaAbonos[1000];
 
-        string archivoUsuarios;
-        string archivoCliente;
-        string archivoVentas;
-        string archivoAbonos;
+        string archivoUsuarios, archivoCliente, archivoVentas, archivoAbonos;
         int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos;
 };
 
