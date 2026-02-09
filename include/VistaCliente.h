@@ -2,6 +2,7 @@
 #define VISTACLIENTE_H
 
 #include <VistaPrincipal.h>
+#include <Cliente.h>
 
 
 class VistaCliente : public VistaPrincipal
@@ -10,11 +11,13 @@ class VistaCliente : public VistaPrincipal
         VistaCliente();
         virtual ~VistaCliente();
 
-        void menuPrincipal(int& opcion) override;
+        void menuCliente(Cliente& u,int& opcion);
+        void editarCliente(Cliente& u);
 
     protected:
 
     private:
+        Cliente a;
 };
 
 #endif // VISTACLIENTE_H

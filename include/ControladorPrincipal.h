@@ -5,8 +5,7 @@
 #include <Cliente.h>
 #include <Ventas.h>
 #include <Abonos.h>
-#include <Administrador.h>
-#include <ControladorAdministrador.h>
+#include <ControladorCliente.h>
 
 #include <fstream>
 #include <sstream>
@@ -21,8 +20,18 @@ class ControladorPrincipal
 
         void ejecutar();
 
-        Usuario usuarioActual();
+        Usuario& usuarioActual();
+        Usuario& getUsuarioLogeado();
+        void buscarClienteActual();
+        Cliente& getClienteActual();
         void menuAdministrador(Usuario adminUser);
+
+        int getCantidadVentas();
+        int getCantidadAbonos();
+
+        Ventas (&getListaVentas())[1000];
+        Abonos (&getListaAbonos())[1000];
+
 
 
         //Metodos para los archivos
@@ -32,17 +41,24 @@ class ControladorPrincipal
         void cargarRegistrosVentas();
         void cargarRegistrosAbonos();
 
+        void guardarRegistroClientes();
+
     protected:
 
     private:
         VistaPrincipal vistaPrin;
+        ControladorCliente conCliente;
+        Usuario usuarioLogeado;
         Usuario listaUsuarios[1000];
         Cliente listaClientes[1000];
         Ventas  listaVentas[1000];
         Abonos  listaAbonos[1000];
 
-        string archivoUsuarios, archivoCliente, archivoVentas, archivoAbonos;
-        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos;
+        string archivoUsuarios;
+        string archivoCliente;
+        string archivoVentas;
+        string archivoAbonos;
+        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos, cantidadVentas, cantidadAbonos, cantidadUsuarios, cantidadClientes, indiceClienteActual;
 };
 
 #endif // CONTROLADORPRINCIPAL_H

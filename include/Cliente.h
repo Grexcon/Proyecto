@@ -11,6 +11,21 @@ class Cliente : public Usuario
         Cliente();
         virtual ~Cliente();
 
+        int getIdClientes();
+        void setIdCliente(int id_cliente);
+
+        string getNombre();
+        void   setNombre(string nombre);
+
+        string getTelefono();
+        void   setTelefono(string telefono);
+
+        string getDireccion();
+        void   setDirreccion(string direccion);
+
+        string datosCliente();
+        string toFileCliente();
+
     protected:
 
     private:
