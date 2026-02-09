@@ -75,7 +75,12 @@ void ControladorCliente::listarVentasyAbonos(Cliente& cliente, Ventas(&ventas)[1
                  << " | Monto: " << ventas[i].getMonto() << endl;
         }
     }
+<<<<<<< HEAD
     cout << "===== Abonos del cliente =====\n";
+=======
+    cout << "Cantidad abonos: " << cantAbonos << endl;
+    //cout << "===== Abonos del cliente =====\n";
+>>>>>>> origin/feature/clientes
     for (int i = 0; i < cantAbonos; i++)
     {
         if (abonos[i].getIdUsuario() == cliente.getIdUsuario())
