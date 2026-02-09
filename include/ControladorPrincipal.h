@@ -24,6 +24,7 @@ class ControladorPrincipal
         Usuario& getUsuarioLogeado();
         void buscarClienteActual();
         Cliente& getClienteActual();
+        void menuAdministrador(Usuario adminUser);
 
         int getCantidadVentas();
         int getCantidadAbonos();
@@ -57,7 +58,7 @@ class ControladorPrincipal
         string archivoCliente;
         string archivoVentas;
         string archivoAbonos;
-        int cantidadUsuarios, cantidadClientes, cantidadVentas, cantidadAbonos, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos, indiceClienteActual;
+        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos, cantidadVentas, cantidadAbonos, cantidadUsuarios, cantidadClientes, indiceClienteActual;
 };
 
 #endif // CONTROLADORPRINCIPAL_H
