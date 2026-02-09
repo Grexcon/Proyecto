@@ -3,6 +3,8 @@
 
 #include <VistaPrincipal.h>
 #include <Cliente.h>
+#include <Ventas.h>
+#include <Abonos.h>
 
 
 class VistaCliente : public VistaPrincipal
@@ -13,6 +15,8 @@ class VistaCliente : public VistaPrincipal
 
         void menuCliente(Cliente& u,int& opcion);
         void editarCliente(Cliente& u);
+        void mostrarVentasYAbonos(Ventas ventas[], int cantVentas,Abonos abonos[], int cantAbonos);
+        void mostrarReporteSaldo(float totalVentas,float totalAbonos,float saldo);
 
     protected:
 
