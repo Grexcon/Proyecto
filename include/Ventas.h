@@ -7,15 +7,25 @@ class Ventas : public Usuario
 {
     public:
         Ventas();
-        Ventas(int id_usuario,int id_venta, string descripcion,string monto);
+        Ventas(int id_usuario,int id_venta, string descripcion,int monto);
         virtual ~Ventas();
+
+        int getIdVenta();
+
+        string getDescripcion();
+        void setDescripcion(string descripcion);
+
+        int getMonto();
+        void setMonto(int monto);
+
+
 
     protected:
 
     private:
         int id_venta;
         string descripcion;
-        string monto;
+        int monto;
 };
 
 #endif // VENTAS_H
