@@ -315,6 +315,10 @@ Abonos (&ControladorPrincipal::getListaAbonos())[1000]
     return listaAbonos;
 }
 
+void ControladorPrincipal::menuAdministrador(Usuario adminUser)
+{
+
+}
 
 
 
