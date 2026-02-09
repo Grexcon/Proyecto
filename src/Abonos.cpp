@@ -1,0 +1,33 @@
+#include "Abonos.h"
+
+Abonos::Abonos()
+{
+    //ctor
+}
+
+Abonos::~Abonos()
+{
+    //dtor
+}
+
+
+Abonos::Abonos(int id_usuario, int id_abono, int monto): Usuario(id_usuario)
+{
+    this -> id_abono = id_abono;
+    setMonto(monto);
+}
+
+int Abonos::getIdAbono()
+{
+    return id_abono;
+}
+
+int Abonos::getMonto()
+{
+    return monto;
+}
+
+void Abonos::setMonto(int monto)
+{
+    this -> monto = monto;
+}

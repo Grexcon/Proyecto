@@ -18,8 +18,9 @@ void VistaPrincipal::menuPrincipal(int& opcion)
     cout << "=========================\n";
     cout << "1. Iniciar sesión\n";
     cout << "2. Salir\n";
-    cout << "Seleccione una opción:\n";
+    cout << "Seleccione una opción:";
     cin >> opcion;
+    cout << endl;
 }
 
 

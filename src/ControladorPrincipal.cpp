@@ -4,9 +4,18 @@ ControladorPrincipal::ControladorPrincipal()
 {
     archivoUsuarios = "usuarios.txt";
     archivoCliente = "clientes.txt";
-    cantidad = 0;
+    archivoVentas = "ventas.txt";
+    archivoAbonos = "abonos.txt";
+    cantidadUsuarios = 0;
+    cantidadClientes = 0;
+    cantidadVentas = 0;
+    cantidadAbonos = 0;
     idConsecutivo = 1;
     idConsecutivoClientes = 1;
+    idConsecutivoVentas = 1;
+    idConsecutivoAbonos = 1;
+    indiceClienteActual = -1;
+
 
 }
 
@@ -20,6 +29,8 @@ void ControladorPrincipal::ejecutar()
 {
     cargarRegistrosUsuarios();
     cargarRegistrosClientes();
+    cargarRegistrosVentas();
+    cargarRegistrosAbonos();
     int opcion;
 
     do
@@ -33,27 +44,18 @@ void ControladorPrincipal::ejecutar()
 
         case 1:
         {
-            Usuario rnUser = usuarioActual();
+            Usuario& rnUser = usuarioActual();
 
-            //Usuario e = vistaPrin.inicioSeccionUsuario();
-            for(int i=0; i < cantidad; i++)
+            if(rnUser.getRol() == "administrador" )
             {
 
-                if(listaUsuarios[i].getUsuario() == rnUser.getUsuario() && listaUsuarios[i].getContrasena() == rnUser.getContrasena())
-                {
-                    if(rnUser.getRol() == "administrador" )
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                    //cout << "administtrador encotrado";
-                }
-
-
             }
+            else
+            {
+                buscarClienteActual();
+                conCliente.ejecutar(*this);
+            }
+
         }
         break;
 
@@ -106,7 +108,7 @@ void ControladorPrincipal::cargarRegistrosUsuarios()
             string rol = campo;
 
             Usuario a(id_usuario,usuario, contrasena,rol);
-            listaUsuarios[cantidad++] = a;
+            listaUsuarios[cantidadUsuarios++] = a;
 
             idConsecutivo = id_usuario+1;
 
@@ -148,7 +150,7 @@ void ControladorPrincipal::cargarRegistrosClientes()
             string direccion = campo;
 
             Cliente a(id_usuario,id_cliente, nombre, telefono, direccion);
-            listaClientes[cantidad++] = a;
+            listaClientes[cantidadClientes++] = a;
 
             idConsecutivo = id_usuario+1;
             idConsecutivoClientes = id_cliente+1;
@@ -158,27 +160,162 @@ void ControladorPrincipal::cargarRegistrosClientes()
     fs.close();
 }
 
-
-Usuario ControladorPrincipal::usuarioActual()
+void ControladorPrincipal::cargarRegistrosVentas()
 {
-    Usuario rnUser = vistaPrin.inicioSeccionUsuario();
-    //Usuario e = vistaPrin.inicioSeccionUsuario();
+    ifstream fs(archivoVentas);
 
-    for(int i=0; i < cantidad; i++)
+
+    if(fs)
     {
 
-        if(listaUsuarios[i].getUsuario() == rnUser.getUsuario())
+        string linea, campo;
+
+        while(getline(fs,linea))
         {
 
-            rnUser = listaUsuarios[i] ;
 
-            cout << rnUser.toString();
+            stringstream ss(linea);
+
+            getline(ss, campo, ';');
+            int id_usuario = stoi(campo);
+
+            getline(ss, campo, ';');
+            int id_ventas = stoi(campo);
+
+            getline(ss, campo, ';');
+            string descripcion = campo;
+
+            getline(ss, campo, ';');
+            int monto = stoi(campo);
+
+            Ventas a(id_usuario,id_ventas, descripcion, monto);
+            listaVentas[cantidadVentas++] = a;
+
+            idConsecutivo = id_usuario+1;
+            idConsecutivoVentas = id_ventas+1;
+        }
+
+    }
+    fs.close();
+}
+
+void ControladorPrincipal::cargarRegistrosAbonos()
+{
+    ifstream fs(archivoAbonos);
+
+
+    if(fs)
+    {
+
+        string linea, campo;
+
+        while(getline(fs,linea))
+        {
+
+
+            stringstream ss(linea);
+
+            getline(ss, campo, ';');
+            int id_usuario = stoi(campo);
+
+            getline(ss, campo, ';');
+            int id_abono = stoi(campo);
+
+            getline(ss, campo, ';');
+            int monto = stoi(campo) ;
+
+            Abonos a(id_usuario,id_abono, monto);
+            listaAbonos[cantidadAbonos++] = a;
+
+            idConsecutivo = id_usuario+1;
+            idConsecutivoAbonos = id_abono+1;
+        }
+
+    }
+    fs.close();
+}
+
+
+
+Usuario& ControladorPrincipal::usuarioActual()
+{
+    Usuario temporal = vistaPrin.inicioSeccionUsuario();
+
+    for(int i=0; i < cantidadUsuarios; i++)
+    {
+
+        if(listaUsuarios[i].getUsuario() == temporal.getUsuario()&& listaUsuarios[i].getContrasena() == temporal.getContrasena())
+        {
+
+            usuarioLogeado = listaUsuarios[i] ;
+
+            cout << usuarioLogeado.toString() << endl;
 
         }
 
 
     }
-    return rnUser;
+    return usuarioLogeado;
 }
+
+Usuario& ControladorPrincipal::getUsuarioLogeado()
+{
+    return usuarioLogeado;
+}
+
+void ControladorPrincipal::buscarClienteActual()
+{
+    indiceClienteActual = -1;
+
+    for(int i = 0; i < cantidadClientes; i++)
+    {
+        if(listaClientes[i].getIdUsuario() == usuarioLogeado.getIdUsuario())
+        {
+            indiceClienteActual = i;
+            break;
+        }
+    }
+}
+
+Cliente& ControladorPrincipal::getClienteActual()
+{
+    return listaClientes[indiceClienteActual];
+}
+
+void ControladorPrincipal::guardarRegistroClientes()
+{
+    ofstream fs(archivoCliente);
+    if(fs)
+    {
+        for(int i=0; i< cantidadClientes; i++)
+        {
+            fs << listaClientes[i].toFileCliente() << endl;
+        }
+    }
+    fs.close();
+}
+
+int ControladorPrincipal::getCantidadVentas()
+{
+    return cantidadVentas;
+}
+
+int ControladorPrincipal::getCantidadAbonos()
+{
+    return cantidadAbonos;
+}
+
+Ventas (&ControladorPrincipal::getListaVentas())[1000]
+{
+    return listaVentas;
+}
+
+Abonos (&ControladorPrincipal::getListaAbonos())[1000]
+{
+    return listaAbonos;
+}
+
+
+
 
 
