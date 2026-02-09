@@ -64,6 +64,12 @@ string Cliente::datosCliente()
     return "Cliente: " + to_string(getIdClientes()) + " - " + getNombre();
 }
 
+string Cliente::toFileCliente()
+{
+    return to_string(id_usuario) + ";" +to_string(id_cliente) + ";" + nombre + ";" + telefono + ";" + direccion;
+}
+
+
 
 
 

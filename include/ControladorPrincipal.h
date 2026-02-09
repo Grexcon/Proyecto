@@ -25,6 +25,12 @@ class ControladorPrincipal
         void buscarClienteActual();
         Cliente& getClienteActual();
 
+        int getCantidadVentas();
+        int getCantidadAbonos();
+
+        Ventas (&getListaVentas())[1000];
+        Abonos (&getListaAbonos())[1000];
+
 
 
         //Metodos para los archivos
@@ -33,6 +39,8 @@ class ControladorPrincipal
         void cargarRegistrosClientes();
         void cargarRegistrosVentas();
         void cargarRegistrosAbonos();
+
+        void guardarRegistroClientes();
 
     protected:
 

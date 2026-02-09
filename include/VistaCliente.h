@@ -12,6 +12,7 @@ class VistaCliente : public VistaPrincipal
         virtual ~VistaCliente();
 
         void menuCliente(Cliente& u,int& opcion);
+        void editarCliente(Cliente& u);
 
     protected:
 

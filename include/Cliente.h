@@ -24,6 +24,7 @@ class Cliente : public Usuario
         void   setDirreccion(string direccion);
 
         string datosCliente();
+        string toFileCliente();
 
     protected:
 

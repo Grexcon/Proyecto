@@ -1,4 +1,4 @@
-2;1;Juan López;8888-1111;Sarapiquí
+2;1;Juan L�pez;8888-1111;Sarapiqu�
 3;2;María Mora;8888-2222;Pococí
 4;3;Andrés Castro;8888-3333;Siquirres
 5;4;Rosa Soto;8888-4444;Limón

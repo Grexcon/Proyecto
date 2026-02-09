@@ -24,12 +24,13 @@ ControladorPrincipal::~ControladorPrincipal()
     //dtor
 }
 
-class ControladorPrincipal;
 
 void ControladorPrincipal::ejecutar()
 {
     cargarRegistrosUsuarios();
     cargarRegistrosClientes();
+    cargarRegistrosVentas();
+    cargarRegistrosAbonos();
     int opcion;
 
     do
@@ -185,7 +186,7 @@ void ControladorPrincipal::cargarRegistrosVentas()
             string descripcion = campo;
 
             getline(ss, campo, ';');
-            string monto = campo;
+            int monto = stoi(campo);
 
             Ventas a(id_usuario,id_ventas, descripcion, monto);
             listaVentas[cantidadVentas++] = a;
@@ -221,7 +222,7 @@ void ControladorPrincipal::cargarRegistrosAbonos()
             int id_abono = stoi(campo);
 
             getline(ss, campo, ';');
-            string monto = campo;
+            int monto = stoi(campo) ;
 
             Abonos a(id_usuario,id_abono, monto);
             listaAbonos[cantidadAbonos++] = a;
@@ -239,7 +240,6 @@ void ControladorPrincipal::cargarRegistrosAbonos()
 Usuario& ControladorPrincipal::usuarioActual()
 {
     Usuario temporal = vistaPrin.inicioSeccionUsuario();
-    //Usuario e = vistaPrin.inicioSeccionUsuario();
 
     for(int i=0; i < cantidadUsuarios; i++)
     {
@@ -265,7 +265,7 @@ Usuario& ControladorPrincipal::getUsuarioLogeado()
 
 void ControladorPrincipal::buscarClienteActual()
 {
-     indiceClienteActual = -1;
+    indiceClienteActual = -1;
 
     for(int i = 0; i < cantidadClientes; i++)
     {
@@ -282,6 +282,38 @@ Cliente& ControladorPrincipal::getClienteActual()
     return listaClientes[indiceClienteActual];
 }
 
+void ControladorPrincipal::guardarRegistroClientes()
+{
+    ofstream fs(archivoCliente);
+    if(fs)
+    {
+        for(int i=0; i< cantidadClientes; i++)
+        {
+            fs << listaClientes[i].toFileCliente() << endl;
+        }
+    }
+    fs.close();
+}
+
+int ControladorPrincipal::getCantidadVentas()
+{
+    return cantidadVentas;
+}
+
+int ControladorPrincipal::getCantidadAbonos()
+{
+    return cantidadAbonos;
+}
+
+Ventas (&ControladorPrincipal::getListaVentas())[1000]
+{
+    return listaVentas;
+}
+
+Abonos (&ControladorPrincipal::getListaAbonos())[1000]
+{
+    return listaAbonos;
+}
 
 
 

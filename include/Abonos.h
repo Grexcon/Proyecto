@@ -8,14 +8,19 @@ class Abonos : public Usuario
 {
     public:
         Abonos();
-        Abonos(int id_usuario,int id_abono, string monto);
+        Abonos(int id_usuario,int id_abono, int monto);
         virtual ~Abonos();
+
+        int getIdAbono();
+
+        int getMonto();
+        void setMonto(int monto);
 
     protected:
 
     private:
         int id_abono;
-        string monto;
+        int monto;
 };
 
 #endif // ABONOS_H

@@ -12,7 +12,7 @@ VistaCliente::~VistaCliente()
 
 void VistaCliente::menuCliente(Cliente& u, int& opcion)
 {
-     cout << "==========================\n";
+    cout << "==========================\n";
     cout << "Menu Cliente \n";
     cout << "==========================\n";
     cout << u.datosCliente() << endl;
@@ -23,6 +23,37 @@ void VistaCliente::menuCliente(Cliente& u, int& opcion)
     cout << "Seleccione una opcion:";
     cin >> opcion;
 }
+
+void VistaCliente::editarCliente(Cliente& u)
+{
+    cout << "==== Editar perfil ====\n";
+    string nuevoNombre, nuevoTelefono, nuevaDireccion;
+
+    cout << "Ingrese nuevo nombre (actual: " << u.getNombre() << "): ";
+    cin.ignore();
+    getline(cin, nuevoNombre);
+    if(nuevoNombre != "")
+    {
+        u.setNombre(nuevoNombre);
+    }
+
+    cout << "Ingrese nuevo telefono (actual: " << u.getTelefono() << "): ";
+    getline(cin, nuevoTelefono);
+    if(nuevoTelefono != "")
+    {
+        u.setTelefono(nuevoTelefono);
+    }
+
+    cout << "Ingrese nueva direccion (actual: " << u.getDireccion() << "): ";
+    getline(cin, nuevaDireccion);
+    if(nuevaDireccion != "")
+    {
+        u.setDirreccion(nuevaDireccion);
+    }
+
+    cout << "Perfil actualizado correctamente.\n";
+}
+
 
 
 
