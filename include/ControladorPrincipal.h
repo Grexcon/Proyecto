@@ -5,6 +5,7 @@
 #include <Cliente.h>
 #include <Ventas.h>
 #include <Abonos.h>
+#include <ControladorCliente.h>
 
 #include <fstream>
 #include <sstream>
@@ -57,7 +58,7 @@ class ControladorPrincipal
         string archivoCliente;
         string archivoVentas;
         string archivoAbonos;
-        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos;
+        int cantidad, idConsecutivo, idConsecutivoClientes, idConsecutivoVentas, idConsecutivoAbonos, cantidadVentas, cantidadAbonos, cantidadUsuarios, cantidadClientes, indiceClienteActual;
 };
 
 #endif // CONTROLADORPRINCIPAL_H
